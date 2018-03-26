@@ -45,9 +45,9 @@ foreach ($exclusion in $processExclusions)
 Write-Host ""
 Write-Host "Your Exclusions:"
 
-$WDAVprefs = Get-MpPreference
-$WDAVprefs.ExclusionPath
-$WDAVprefs.ExclusionProcess
+$prefs = Get-MpPreference
+$prefs.ExclusionPath
+$prefs.ExclusionProcess
 
 Write-Host ""
 Write-Host "Enjoy faster build times and coding!"
