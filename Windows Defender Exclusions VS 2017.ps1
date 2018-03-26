@@ -1,4 +1,3 @@
-$WDAVprefs = Get-MpPreference
 $userPath = $env:USERPROFILE
 $pathExclusions = New-Object System.Collections.ArrayList
 $processExclusions = New-Object System.Collections.ArrayList
@@ -46,6 +45,7 @@ foreach ($exclusion in $processExclusions)
 Write-Host ""
 Write-Host "Your Exclusions:"
 
+$WDAVprefs = Get-MpPreference
 $WDAVprefs.ExclusionPath
 $WDAVprefs.ExclusionProcess
 
