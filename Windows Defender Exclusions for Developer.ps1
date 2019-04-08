@@ -1,3 +1,4 @@
+# See: https://medium.com/burak-tasci/tweaking-the-environment-to-speed-up-visual-studio-79cd1920fed9
 $userPath = $env:USERPROFILE
 $pathExclusions = New-Object System.Collections.ArrayList
 $processExclusions = New-Object System.Collections.ArrayList
