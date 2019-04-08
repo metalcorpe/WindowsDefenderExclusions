@@ -12,6 +12,24 @@ $pathExclusions.Add('C:\Program Files (x86)\Microsoft Visual Studio 10.0') > $nu
 $pathExclusions.Add('C:\Program Files (x86)\Microsoft Visual Studio') > $null
 $pathExclusions.Add('C:\Program Files (x86)\Microsoft SDKs\NuGetPackages') > $null
 $pathExclusions.Add('C:\Program Files (x86)\Microsoft SDKs') > $null
+$pathExclusions.Add('C:\Windows\assembly') > $null
+$pathExclusions.Add('C:\Windows\Microsoft.NET') > $null
+$pathExclusions.Add('C:\Program Files (x86)\MSBuild') > $null
+$pathExclusions.Add('C:\Program Files\dotnet') > $null
+$pathExclusions.Add('C:\Program Files (x86)\Microsoft SDKs') > $null
+$pathExclusions.Add('C:\Program Files\Microsoft SDKs') > $null
+$pathExclusions.Add('C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv') > $null
+
+# Cache Folders
+$pathExclusions.Add('$userPath\.nuget') > $null
+$pathExclusions.Add('C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files') > $null
+$pathExclusions.Add('C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files') > $null
+$pathExclusions.Add('$userPath\AppData\Local\Microsoft\WebsiteCache') > $null
+$pathExclusions.Add('$userPath\AppData\Local\Jetbrains') > $null
+$pathExclusions.Add('$userPath\AppData\Roaming\Microsoft\VisualStudio') > $null
+$pathExclusions.Add('$userPath\AppData\Roaming\JetBrains') > $null
+$pathExclusions.Add('$userPath\AppData\Roaming\npm') > $null
+$pathExclusions.Add('$userPath\AppData\Roaming\npm-cache') > $null
 
 # VS
 $processExclusions.Add('vshost-clr2.exe') > $null
@@ -59,6 +77,7 @@ $processExclusions.Add('vshost32-clr2.exe') > $null
 
 # VS Code
 $processExclusions.Add('Code - Insiders.exe') > $null
+$processExclusions.Add('Code.exe') > $null
 
 # Runtimes, build tools
 $processExclusions.Add('dotnet.exe') > $null
@@ -73,6 +92,8 @@ $processExclusions.Add('perfwatson2.exe') > $null
 $processExclusions.Add('ServiceHub.Host.Node.x86.exe') > $null
 $processExclusions.Add('vbcscompiler.exe') > $null
 $processExclusions.Add('nuget.exe') > $null
+$processExclusions.Add('cake.exe') > $null
+$processExclusions.Add('packet.exe') > $null
 
 # VCS
 $processExclusions.Add('git.exe') > $null
