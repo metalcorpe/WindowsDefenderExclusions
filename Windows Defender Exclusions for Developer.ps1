@@ -6,20 +6,47 @@ $processExclusions = New-Object System.Collections.ArrayList
 $pathExclusions.Add('C:\Windows\Microsoft.NET') > $null
 $pathExclusions.Add('C:\Windows\assembly') > $null
 $pathExclusions.Add($userPath + '\AppData\Local\Microsoft\VisualStudio') > $null
-$pathExclusions.Add('C:\ProgramData\Microsoft\VisualStudio\Packages') > $null
+$pathExclusions.Add($userPath + '\AppData\Local\Microsoft\VisualStudio Services') > $null
+$pathExclusions.Add($userPath + '\AppData\Local\GitCredentialManager') > $null
+$pathExclusions.Add($userPath + '\AppData\Local\GitHubVisualStudio') > $null
+$pathExclusions.Add($userPath + '\AppData\Local\Microsoft\dotnet') > $null
+$pathExclusions.Add($userPath + '\AppData\Local\Microsoft\VSApplicationInsights') > $null
+$pathExclusions.Add($userPath + '\AppData\Local\Microsoft\VSCommon') > $null
+$pathExclusions.Add($userPath + '\AppData\Local\Temp\VSFeedbackIntelliCodeLogs') > $null
+$pathExclusions.Add($userPath + '\AppData\Roaming\Microsoft Visual Studio') > $null
+$pathExclusions.Add($userPath + '\AppData\Roaming\NuGet') > $null
+$pathExclusions.Add($userPath + '\AppData\Roaming\Visual Studio Setup') > $null
+$pathExclusions.Add($userPath + '\AppData\Roaming\vstelemetry') > $null
+$pathExclusions.Add($userPath + '\AppData\Roaming\Microsoft\VisualStudio') > $null
+$pathExclusions.Add($userPath + '\AppData\Roaming\HeidiSQL') > $null
+$pathExclusions.Add($userPath + '\.dotnet') > $null
+$pathExclusions.Add($userPath + '\.librarymanager') > $null
+$pathExclusions.Add('C:\ProgramData\Microsoft\VisualStudio') > $null
+$pathExclusions.Add('C:\ProgramData\Microsoft\NetFramework') > $null
+$pathExclusions.Add('C:\ProgramData\Microsoft VisualStudio') > $null
+$pathExclusions.Add('C:\ProgramData\MySQL') > $null
+$pathExclusions.Add('C:\ProgramData\Git') > $null
 $pathExclusions.Add('C:\Program Files (x86)\MSBuild') > $null
 $pathExclusions.Add('C:\Program Files (x86)\Microsoft Visual Studio 14.0') > $null
 $pathExclusions.Add('C:\Program Files (x86)\Microsoft Visual Studio 10.0') > $null
 $pathExclusions.Add('C:\Program Files (x86)\Microsoft Visual Studio') > $null
-$pathExclusions.Add('C:\Program Files (x86)\Microsoft SDKs\NuGetPackages') > $null
 $pathExclusions.Add('C:\Program Files (x86)\Microsoft SDKs') > $null
-$pathExclusions.Add('C:\Windows\assembly') > $null
-$pathExclusions.Add('C:\Windows\Microsoft.NET') > $null
-$pathExclusions.Add('C:\Program Files (x86)\MSBuild') > $null
-$pathExclusions.Add('C:\Program Files\dotnet') > $null
-$pathExclusions.Add('C:\Program Files (x86)\Microsoft SDKs') > $null
-$pathExclusions.Add('C:\Program Files\Microsoft SDKs') > $null
 $pathExclusions.Add('C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv') > $null
+$pathExclusions.Add('C:\Program Files (x86)\Microsoft SQL Server') > $null
+$pathExclusions.Add('C:\Program Files (x86)\Entity Framework Tools') > $null
+$pathExclusions.Add('C:\Program Files (x86)\IIS') > $null
+$pathExclusions.Add('C:\Program Files (x86)\IIS Express') > $null
+$pathExclusions.Add('C:\Program Files (x86)\Microsoft Web Tools') > $null
+$pathExclusions.Add('C:\Program Files (x86)\Microsoft.NET') > $null
+$pathExclusions.Add('C:\Program Files (x86)\MySQL') > $null
+$pathExclusions.Add('C:\Program Files (x86)\NuGet') > $null
+$pathExclusions.Add('C:\Program Files\dotnet') > $null
+$pathExclusions.Add('C:\Program Files\Microsoft SDKs') > $null
+$pathExclusions.Add('C:\Program Files\Microsoft SQL Server') > $null
+$pathExclusions.Add('C:\Program Files\IIS') > $null
+$pathExclusions.Add('C:\Program Files\IIS Express') > $null
+$pathExclusions.Add('C:\Program Files\MySQL') > $null
+$pathExclusions.Add('C:\Program Files\Git') > $null
 
 # Cache Folders
 $pathExclusions.Add('$userPath\.nuget') > $null
@@ -95,6 +122,11 @@ $processExclusions.Add('vbcscompiler.exe') > $null
 $processExclusions.Add('nuget.exe') > $null
 $processExclusions.Add('cake.exe') > $null
 $processExclusions.Add('packet.exe') > $null
+$processExclusions.Add('csc.exe') > $null
+$processExclusions.Add('fsc.exe') > $null
+$processExclusions.Add('mysqld.exe') > $null
+$processExclusions.Add('git.exe') > $null
+$processExclusions.Add('heidisql.exe') > $null
 
 # VCS
 $processExclusions.Add('git.exe') > $null
@@ -191,7 +223,7 @@ $processExclusions.Add('UnityShaderCompiler.exe') > $null
 $processExclusions.Add('UnityYAMLMerge.exe') > $null
 $processExclusions.Add('UnityCrashHandler64.exe') > $null
 
-Write-Host "This script will create Windows Defender exclusions for common Visual Studio 2017 folders and processes."
+Write-Host "This script will create Windows Defender exclusions for common Visual Studio folders and processes."
 Write-Host ""
 $projectsFolder = Read-Host 'What is the path to your Projects folder? (example: c:\projects)'
 
