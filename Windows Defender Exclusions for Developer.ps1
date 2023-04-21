@@ -61,7 +61,7 @@ $pathExclusions.Add('C:\Program Files\IIS Express') > $null
 $pathExclusions.Add('C:\Program Files\MySQL') > $null
 $pathExclusions.Add('C:\Program Files\Git') > $null
 
-# Cache Folders
+#region Cache Folders
 $pathExclusions.Add($userPath + '\.nuget') > $null
 $pathExclusions.Add($userPath + '\AppData\Local\Microsoft\WebsiteCache') > $null
 $pathExclusions.Add($userPath + '\AppData\Local\Jetbrains') > $null
@@ -71,8 +71,9 @@ $pathExclusions.Add($userPath + '\AppData\Roaming\npm') > $null
 $pathExclusions.Add($userPath + '\AppData\Roaming\npm-cache') > $null
 $pathExclusions.Add('C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files') > $null
 $pathExclusions.Add('C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files') > $null
+#endregion
 
-# VS
+#region VS
 $processExclusions.Add('vshost-clr2.exe') > $null
 $processExclusions.Add('VSInitializer.exe') > $null
 $processExclusions.Add('VSIXInstaller.exe') > $null
@@ -115,12 +116,14 @@ $processExclusions.Add('VSHiveStub.exe') > $null
 $processExclusions.Add('vshost.exe') > $null
 $processExclusions.Add('vshost32.exe') > $null
 $processExclusions.Add('vshost32-clr2.exe') > $null
+#endregion
 
-# VS Code
+#region VS Code
 $processExclusions.Add('Code - Insiders.exe') > $null
 $processExclusions.Add('Code.exe') > $null
+#endregion
 
-# Runtimes, build tools
+#region Runtimes, build tools
 $processExclusions.Add('dotnet.exe') > $null
 $processExclusions.Add('mono.exe') > $null
 $processExclusions.Add('mono-sgen.exe') > $null
@@ -140,13 +143,15 @@ $processExclusions.Add('fsc.exe') > $null
 $processExclusions.Add('mysqld.exe') > $null
 $processExclusions.Add('git.exe') > $null
 $processExclusions.Add('heidisql.exe') > $null
+#endregion
 
-# Shells
+#region Shells
 $processExclusions.Add('git-bash.exe') > $null
 $processExclusions.Add('bash.exe') > $null
 $processExclusions.Add('powershell.exe') > $null
+#endregion
 
-# All of JetBrains stuff
+#region All of JetBrains stuff
 $processExclusions.Add('JetBrains.EntityFramework.Runner620.exe') > $null
 $processExclusions.Add('JetBrains.MsBuild.TaskEntryPoint.exe') > $null
 $processExclusions.Add('JetBrains.Platform.Satellite.exe') > $null
@@ -220,20 +225,23 @@ $processExclusions.Add('NGen Rider Assemblies.exe') > $null
 $processExclusions.Add('idea.exe') > $null
 $processExclusions.Add('idea64.exe') > $null
 $processExclusions.Add('JetBrains.Etw.Collector.Host.exe') > $null
+#endregion
 
-# JB Toolbox
+#region JB Toolbox
 $processExclusions.Add('jetbrains-toolbox.exe') > $null
 $processExclusions.Add('jetbrains-toolbox-cef.exe') > $null
 $processExclusions.Add('jetbrains-toolbox-cef-helper.exe') > $null
+#endregion
 
-# Unity
+#region Unity
 $processExclusions.Add('UnityHelper.exe') > $null
 $processExclusions.Add('Unity.exe') > $null
 $processExclusions.Add('UnityShaderCompiler.exe') > $null
 $processExclusions.Add('UnityYAMLMerge.exe') > $null
 $processExclusions.Add('UnityCrashHandler64.exe') > $null
+#endregion
 
-# More: https://github.com/AshSewell/WindowsDefenderExclusions.git
+#region More: https://github.com/AshSewell/WindowsDefenderExclusions.git
 $pathExclusions.Add('C:\ProgramData\Microsoft Visual Studio') > $null
 $pathExclusions.Add('C:\Program Files\Microsoft Visual Studio') > $null
 $pathExclusions.Add('C:\Program Files\Epic Games') > $null
@@ -277,6 +285,7 @@ $extensionExclusions.Add('.sln') > $null
 $extensionExclusions.Add('.vcxproj') > $null
 $extensionExclusions.Add('.user') > $null
 $extensionExclusions.Add('.uproject') > $null
+#endregion
 
 Write-Host "This script will create Windows Defender exclusions for common Visual Studio folders and processes."
 Write-Host ""
