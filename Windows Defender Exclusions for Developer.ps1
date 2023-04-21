@@ -1,3 +1,4 @@
+# See: https://medium.com/burak-tasci/tweaking-the-environment-to-speed-up-visual-studio-79cd1920fed9
 $userPath = $env:USERPROFILE
 $pathExclusions = New-Object System.Collections.ArrayList
 $processExclusions = New-Object System.Collections.ArrayList
@@ -15,7 +16,6 @@ $pathExclusions.Add('C:\_JenkinsMerge') > $null
 $pathExclusions.Add('C:\JenkinsSlave') > $null
 $pathExclusions.Add('C:\JenkinsWorkspaces') > $null
 $pathExclusions.Add('C:\Staging') > $null
-
 
 $pathExclusions.Add($userPath + '\.dotnet') > $null
 $pathExclusions.Add($userPath + '\.librarymanager') > $null
@@ -74,18 +74,18 @@ $pathExclusions.Add('C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary A
 #endregion
 
 #region VS
-$processExclusions.Add('vshost-clr2.exe') > $null
-$processExclusions.Add('VSInitializer.exe') > $null
-$processExclusions.Add('VSIXInstaller.exe') > $null
-$processExclusions.Add('VSLaunchBrowser.exe') > $null
-$processExclusions.Add('vsn.exe') > $null
-$processExclusions.Add('VsRegEdit.exe') > $null
-$processExclusions.Add('VSWebHandler.exe') > $null
-$processExclusions.Add('VSWebLauncher.exe') > $null
-$processExclusions.Add('XDesProc.exe') > $null
-$processExclusions.Add('Blend.exe') > $null
-$processExclusions.Add('DDConfigCA.exe') > $null
-$processExclusions.Add('devenv.exe') > $null
+$processExclusions.Add('vshost-clr2.exe') > $null       # vshost-clr2.exe is used by Visual Studio to provide a debugging environment for .NET Framework applications and works in conjunction with the Visual Studio Hosting Process (vshost.exe).
+$processExclusions.Add('VSInitializer.exe') > $null     # VSInitializer.exe is a process used by Visual Studio to initialize the application and set up the environment. It helps to speed up the launch time of the application by performing initialization tasks in the background.
+$processExclusions.Add('VSIXInstaller.exe') > $null     # VSIXInstaller.exe is used to install Visual Studio extensions and manage add-ons for the Visual Studio IDE.
+$processExclusions.Add('VSLaunchBrowser.exe') > $null   # VSLaunchBrowser.exe is used by Visual Studio to launch web applications in a browser for debugging and testing purposes.
+$processExclusions.Add('vsn.exe') > $null               # vsn.exe is used by Visual Studio to manage the versioning and signing of .NET Framework assemblies through a command-line interface.
+$processExclusions.Add('VsRegEdit.exe') > $null         # VsRegEdit.exe is used by Visual Studio to view, edit, and manage the Visual Studio registry settings through a user-friendly interface.
+$processExclusions.Add('VSWebHandler.exe') > $null      # VSWebHandler.exe is used by Visual Studio to handle HTTP requests for web applications during debugging and testing, allowing developers to interact with and debug web applications in real-time.
+$processExclusions.Add('VSWebLauncher.exe') > $null     # VSWebLauncher.exe is used by Visual Studio to launch web applications in a web browser for debugging and testing purposes, allowing developers to interact with and debug web applications in real-time.
+$processExclusions.Add('XDesProc.exe') > $null          # XDesProc.exe is used by Visual Studio to provide design-time support for Windows Forms and WPF applications, allowing developers to visually design the user interface of their applications.
+$processExclusions.Add('Blend.exe') > $null             # Blend.exe is used by Visual Studio to create and design user interfaces for XAML-based applications using a drag-and-drop interface and a wide range of design tools and features.
+$processExclusions.Add('DDConfigCA.exe') > $null        # DDConfigCA.exe is used by Visual Studio to configure the permissions and security settings for the ClickOnce deployment of .NET applications through a command-line interface.
+$processExclusions.Add('devenv.exe') > $null            # devenv.exe is the main executable file for Microsoft Visual Studio's integrated development environment, which is used by developers to create and edit software applications for a variety of platforms.
 $processExclusions.Add('FeedbackCollector.exe') > $null
 $processExclusions.Add('Microsoft.VisualStudio.Web.Host.exe') > $null
 $processExclusions.Add('mspdbsrv.exe') > $null
@@ -296,20 +296,17 @@ Write-Host "Adding Path Exclusion: " $projectsFolder
 Add-MpPreference -ExclusionPath $projectsFolder
 
 
-foreach ($exclusion in $pathExclusions) 
-{
+foreach ($exclusion in $pathExclusions) {
     Write-Host "Adding Path Exclusion: " $exclusion
     Add-MpPreference -ExclusionPath $exclusion
 }
 
-foreach ($exclusion in $processExclusions)
-{
+foreach ($exclusion in $processExclusions) {
     Write-Host "Adding Process Exclusion: " $exclusion
     Add-MpPreference -ExclusionProcess $exclusion
 }
 
-foreach ($exclusion in $extensionExclusions)
-{
+foreach ($exclusion in $extensionExclusions) {
     Write-Host "Adding Extension Exclusion: " $exclusion
     Add-MpPreference -ExclusionExtension $exclusion
 }
