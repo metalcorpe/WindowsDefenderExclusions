@@ -62,15 +62,15 @@ $pathExclusions.Add('C:\Program Files\MySQL') > $null
 $pathExclusions.Add('C:\Program Files\Git') > $null
 
 # Cache Folders
-$pathExclusions.Add('$userPath\.nuget') > $null
+$pathExclusions.Add($userPath + '\.nuget') > $null
+$pathExclusions.Add($userPath + '\AppData\Local\Microsoft\WebsiteCache') > $null
+$pathExclusions.Add($userPath + '\AppData\Local\Jetbrains') > $null
+$pathExclusions.Add($userPath + '\AppData\Roaming\Microsoft\VisualStudio') > $null
+$pathExclusions.Add($userPath + '\AppData\Roaming\JetBrains') > $null
+$pathExclusions.Add($userPath + '\AppData\Roaming\npm') > $null
+$pathExclusions.Add($userPath + '\AppData\Roaming\npm-cache') > $null
 $pathExclusions.Add('C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files') > $null
 $pathExclusions.Add('C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files') > $null
-$pathExclusions.Add('$userPath\AppData\Local\Microsoft\WebsiteCache') > $null
-$pathExclusions.Add('$userPath\AppData\Local\Jetbrains') > $null
-$pathExclusions.Add('$userPath\AppData\Roaming\Microsoft\VisualStudio') > $null
-$pathExclusions.Add('$userPath\AppData\Roaming\JetBrains') > $null
-$pathExclusions.Add('$userPath\AppData\Roaming\npm') > $null
-$pathExclusions.Add('$userPath\AppData\Roaming\npm-cache') > $null
 
 # VS
 $processExclusions.Add('vshost-clr2.exe') > $null
