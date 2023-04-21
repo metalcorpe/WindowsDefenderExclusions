@@ -86,36 +86,36 @@ $processExclusions.Add('XDesProc.exe') > $null          # XDesProc.exe is used b
 $processExclusions.Add('Blend.exe') > $null             # Blend.exe is used by Visual Studio to create and design user interfaces for XAML-based applications using a drag-and-drop interface and a wide range of design tools and features.
 $processExclusions.Add('DDConfigCA.exe') > $null        # DDConfigCA.exe is used by Visual Studio to configure the permissions and security settings for the ClickOnce deployment of .NET applications through a command-line interface.
 $processExclusions.Add('devenv.exe') > $null            # devenv.exe is the main executable file for Microsoft Visual Studio's integrated development environment, which is used by developers to create and edit software applications for a variety of platforms.
-$processExclusions.Add('FeedbackCollector.exe') > $null
-$processExclusions.Add('Microsoft.VisualStudio.Web.Host.exe') > $null
-$processExclusions.Add('mspdbsrv.exe') > $null
-$processExclusions.Add('MSTest.exe') > $null
-$processExclusions.Add('PerfWatson2.exe') > $null
-$processExclusions.Add('Publicize.exe') > $null
-$processExclusions.Add('QTAgent.exe') > $null
-$processExclusions.Add('QTAgent_35.exe') > $null
-$processExclusions.Add('QTAgent_40.exe') > $null
-$processExclusions.Add('QTAgent32.exe') > $null
-$processExclusions.Add('QTAgent32_35.exe') > $null
-$processExclusions.Add('QTAgent32_40.exe') > $null
-$processExclusions.Add('QTDCAgent.exe') > $null
-$processExclusions.Add('QTDCAgent32.exe') > $null
-$processExclusions.Add('StorePID.exe') > $null
-$processExclusions.Add('T4VSHostProcess.exe') > $null
-$processExclusions.Add('TailoredDeploy.exe') > $null
-$processExclusions.Add('TCM.exe') > $null
-$processExclusions.Add('TextTransform.exe') > $null
-$processExclusions.Add('TfsLabConfig.exe') > $null
-$processExclusions.Add('UserControlTestContainer.exe') > $null
-$processExclusions.Add('vb7to8.exe') > $null
-$processExclusions.Add('VcxprojReader.exe') > $null
-$processExclusions.Add('VsDebugWERHelper.exe') > $null
-$processExclusions.Add('VSFinalizer.exe') > $null
-$processExclusions.Add('VsGa.exe') > $null
-$processExclusions.Add('VSHiveStub.exe') > $null
-$processExclusions.Add('vshost.exe') > $null
-$processExclusions.Add('vshost32.exe') > $null
-$processExclusions.Add('vshost32-clr2.exe') > $null
+$processExclusions.Add('FeedbackCollector.exe') > $null # FeedbackCollector.exe is used by Visual Studio to collect feedback and diagnostic data from users who participate in the Visual Studio Customer Experience Improvement Program.
+$processExclusions.Add('Microsoft.VisualStudio.Web.Host.exe') > $null   # Microsoft.VisualStudio.Web.Host.exe is used by Visual Studio to host and debug web applications locally, providing a lightweight web server and handling requests for both static and dynamic content.
+$processExclusions.Add('mspdbsrv.exe') > $null          # mspdbsrv.exe is used by Visual Studio to manage access to program database (PDB) files during the debugging process, allowing multiple instances of the debugger to access them simultaneously.
+$processExclusions.Add('MSTest.exe') > $null            # MSTest.exe is used by Visual Studio to run automated tests on .NET applications, allowing developers to test the functionality and performance of their code using the MSTest framework and a command-line interface.
+$processExclusions.Add('PerfWatson2.exe') > $null       # PerfWatson2.exe is used by Visual Studio to collect performance and diagnostic data from the IDE and send it to Microsoft for analysis, with the goal of identifying and diagnosing issues and developing solutions to improve the performance and reliability of the IDE over time.
+$processExclusions.Add('Publicize.exe') > $null         # Publicize.exe is used by Visual Studio to publish and deploy applications to various platforms and app stores, providing a streamlined process for packaging and configuring the application for distribution.
+$processExclusions.Add('QTAgent.exe') > $null           # QTAgent.exe is used by Visual Studio to execute automated tests on Windows applications using the Microsoft Visual Studio Test Agent, providing a framework for executing tests in a variety of environments and configurations.
+$processExclusions.Add('QTAgent_35.exe') > $null        # QTAgent_35.exe is used by Visual Studio to execute automated tests on Windows applications using the Microsoft Visual Studio Test Agent 2010, providing a framework for executing tests in a variety of environments and configurations.
+$processExclusions.Add('QTAgent_40.exe') > $null        # QTAgent_40.exe is used by Visual Studio to execute automated tests on Windows applications using the Microsoft Visual Studio Test Agent 2012, providing a framework for executing tests in a variety of environments and configurations.
+$processExclusions.Add('QTAgent32.exe') > $null         # QTAgent32.exe is used by Visual Studio to execute automated tests on 32-bit Windows applications using the Microsoft Visual Studio Test Agent, providing a framework for executing tests in a variety of environments and configurations.
+$processExclusions.Add('QTAgent32_35.exe') > $null      # QTAgent32_35.exe is used by Visual Studio to execute automated tests on 32-bit Windows applications using the Microsoft Visual Studio Test Agent 2010, providing a framework for executing tests in a variety of environments and configurations.
+$processExclusions.Add('QTAgent32_40.exe') > $null      # QTAgent32_40.exe is used by Visual Studio to execute automated tests on 32-bit Windows applications using the Microsoft Visual Studio Test Agent 2012, providing a framework for executing tests in a variety of environments and configurations.
+$processExclusions.Add('QTDCAgent.exe') > $null         # QTDCAgent.exe is used by Visual Studio to perform load tests on web applications, providing a framework for executing tests in a variety of environments and configurations.
+$processExclusions.Add('QTDCAgent32.exe') > $null       # QTDCAgent32.exe is used by Visual Studio to perform load tests on web applications on 32-bit machines, providing a framework for executing tests in a variety of environments and configurations.
+$processExclusions.Add('StorePID.exe') > $null          # StorePID.exe is used by Visual Studio to ensure that users have a valid license and can use the software legally.
+$processExclusions.Add('T4VSHostProcess.exe') > $null   # T4VSHostProcess.exe is used by Visual Studio to execute T4 code generation templates, providing a safe and reliable way to automate the process of generating source code files.
+$processExclusions.Add('TailoredDeploy.exe') > $null    # TailoredDeploy.exe is used by Visual Studio to create customized deployment packages for tailored solutions, providing a streamlined and efficient way to deploy applications to clients.
+$processExclusions.Add('TCM.exe') > $null               # TCM.exe is used by Visual Studio to manage and execute test cases, providing a powerful and flexible tool for automated testing.
+$processExclusions.Add('TextTransform.exe') > $null     # TextTransform.exe is used by Visual Studio to generate code from T4 templates, providing a flexible and efficient way to create custom code generators.
+$processExclusions.Add('TfsLabConfig.exe') > $null      # TfsLabConfig.exe is used by Visual Studio to automate the creation and management of lab environments, providing a powerful and flexible tool for testing and development purposes.
+$processExclusions.Add('UserControlTestContainer.exe') > $null  # UserControlTestContainer.exe is used by Visual Studio to test user interface controls and components, providing a convenient and standardized way to ensure the quality and reliability of custom or third-party controls.
+$processExclusions.Add('vb7to8.exe') > $null            # vb7to8.exe is a tool used to upgrade Visual Basic 7.0 code to Visual Basic 8.0, automating the process of making the necessary syntax and functionality changes.
+$processExclusions.Add('VcxprojReader.exe') > $null     # VcxprojReader.exe is a tool used to read and understand Visual C++ project files outside of Visual Studio, providing users with a way to view the project's build settings, dependencies, and configuration options.
+$processExclusions.Add('VsDebugWERHelper.exe') > $null  # VsDebugWERHelper.exe is a utility that is used by Visual Studio to collect and send error reports to the Windows Error Reporting service, providing developers with important information to diagnose and fix issues in their applications.
+$processExclusions.Add('VSFinalizer.exe') > $null       # VSFinalizer.exe is a process used by Visual Studio to perform final cleanup tasks to ensure a clean and stable environment after debugging or when the application is closed.
+$processExclusions.Add('VsGa.exe') > $null              # VsGa.exe is a process used by Visual Studio to collect anonymous usage data and send it to Microsoft to improve the quality and performance of the product.
+$processExclusions.Add('VSHiveStub.exe') > $null        # VSHiveStub.exe process is typically run during the installation or update of Visual Studio and is responsible for creating and managing the registry hive.
+$processExclusions.Add('vshost.exe') > $null            # vshost.exe is a process used by Visual Studio to run applications during the debugging process. It is a hosting process that runs alongside the application being debugged, and allows for debugging features such as breakpoints and variable inspection.
+$processExclusions.Add('vshost32.exe') > $null          # vshost32.exe is a process used by Visual Studio to run applications during the debugging process. It is a 32-bit hosting process that runs alongside the application being debugged, and allows for debugging features such as breakpoints and variable inspection.
+$processExclusions.Add('vshost32-clr2.exe') > $null     # vshost32-clr2.exe is a Windows process that acts as a hosting environment for .NET Framework applications developed in Visual Studio. It is a 32-bit version of the vshost.exe process that allows developers to debug and test their applications in a controlled environment. The process runs in the background when a Visual Studio project is launched and provides a number of services for the application, including debugging, profiling, and code coverage analysis.
 #endregion
 
 #region VS Code
