@@ -316,8 +316,15 @@ Write-Host ""
 Write-Host "Your Exclusions:"
 
 $prefs = Get-MpPreference
+Write-Host ""
+Write-Host "Exclusion Path:"
 $prefs.ExclusionPath
+Write-Host ""
+Write-Host "Exclusion Process:"
 $prefs.ExclusionProcess
+Write-Host ""
+Write-Host "Exclusion Extension:"
+$prefs.ExclusionExtension
 
 Write-Host ""
 Write-Host "Enjoy faster build times and coding!"
