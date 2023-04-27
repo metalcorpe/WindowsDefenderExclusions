@@ -303,6 +303,7 @@ Function Misc {
     $extensionExclusions.Add('.h') > $null
     $extensionExclusions.Add('.hpp') > $null
     $extensionExclusions.Add('.o') > $null
+    $extensionExclusions.Add('.a') > $null
     $extensionExclusions.Add('.pdb') > $null
     $extensionExclusions.Add('.db') > $null
     $extensionExclusions.Add('.sln') > $null
@@ -310,6 +311,31 @@ Function Misc {
     $extensionExclusions.Add('.user') > $null
     $extensionExclusions.Add('.uproject') > $null
     #endregion
+}
+
+Function Golang {
+    $goPath = $env:USERPROFILE
+
+    $processExclusions.Add('go.exe') > $null
+    $processExclusions.Add('dlv.exe') > $null
+    $processExclusions.Add('golint.exe') > $null
+    $processExclusions.Add('guru.exe') > $null
+    $processExclusions.Add('godef.exe') > $null
+
+    $processExclusions.Add('goland.exe') > $null
+
+    $extensionExclusions.Add('.go') > $null
+    $extensionExclusions.Add('.mod') > $null
+    $extensionExclusions.Add('.sum') > $null
+
+    $pathExclusions.Add('C:\Go\bin') > $null
+    $pathExclusions.Add('C:\Program Files\JetBrains\GoLand') > $null
+
+    $pathExclusions.Add($goPath + '\pkg') > $null
+    $pathExclusions.Add($goPath + '\bin') > $null
+    $pathExclusions.Add($userPath + '\AppData\Local\Temp\go-build') > $null
+
+
 }
 
 If ($Scope = "all") {
@@ -323,6 +349,7 @@ If ($Scope = "all") {
     JetBrains
     Unity
     Misc
+    Golang
 }
 
 Write-Host "This script will create Windows Defender exclusions for common Visual Studio folders and processes."
