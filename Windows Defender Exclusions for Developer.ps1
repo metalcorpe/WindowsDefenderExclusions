@@ -314,7 +314,7 @@ Function Misc {
 }
 
 Function Golang {
-    $goPath = $env:USERPROFILE
+    $goPath = $env:GOPATH
 
     $processExclusions.Add('go.exe') > $null
     $processExclusions.Add('dlv.exe') > $null
